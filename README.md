@@ -1,4 +1,4 @@
 # Students Profile
-life version at: https://gameystudentsprofile.netlify.app/
+life version at: https://gamalopenai.netlify.app/
 # Status
 in development
