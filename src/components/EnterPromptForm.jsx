@@ -23,6 +23,7 @@ export const EnterPromptForm = ()=> {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
+        if(!value) return alert('You should enter some text!')
         updatePromptsAndOutputsContext(value);
         setValue('');
     }

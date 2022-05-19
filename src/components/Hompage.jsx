@@ -3,6 +3,7 @@ import { EnterPromptForm } from "../components/EnterPromptForm";
 import { useContext } from "react";
 import "../index.css";
 import { Bounce, JackInTheBox, Slide, Zoom } from "react-awesome-reveal";
+import { Animate } from "react-animate-mount";
 
 const Homepage = () => {
   const { state } = useContext(
@@ -47,6 +48,7 @@ const Homepage = () => {
     fontWeight: "bold",
     fontSize: "calc(1rem + 6vw)",
     zIndex: "10",
+    textAlign: "center"
   };
   const funWithAIBg = {
     background: `${robotBgvalue}`,
@@ -54,6 +56,8 @@ const Homepage = () => {
     minHeight: "80vh",
     borderRadius: ".5rem",
   }
+
+  const newestToOldest = [...state].reverse();
 
   return (
     <>
@@ -91,24 +95,24 @@ const Homepage = () => {
                       </section>
                       <section>
                         <ul style={{ paddingLeft: "0" }}>
-                          {state &&
-                            state.map(({ input, output }) => {
+                          {newestToOldest &&
+                            newestToOldest.map(({ input, output }) => {
                               return (
+                                
                                 <li key={++newId} style={{ listStyle: "none" }}>
                                   <article>
                                     {input && (
-                                        <Slide direction="left">
+                                 
                                       <section
                                         className="prompt"
                                         style={promptAndOutputWrHomepageerStyle}
                                       >
                                         <h2 style={prompAndtOutputTxtStyle}>
+                                          <span className="badge pl-0">Prompt: </span>
                                           {input}
                                         </h2>
                                       </section>
-                                      </Slide>
                                     )}
-                                      <Bounce delay={750}>
                                     <section
                                       style={{
                                         display: "flex",
@@ -116,14 +120,15 @@ const Homepage = () => {
                                       }}
                                     >
                                       <section
+                                        className=""
                                         style={promptAndOutputWrHomepageerStyle}
                                       >
                                         <h2 style={prompAndtOutputTxtStyle}>
+                                        <span className="badge pl-0">Response: </span>
                                           {output}
                                         </h2>
                                       </section>
                                     </section>
-                                    </Bounce>
                                   </article>
                                 </li>
                               );
