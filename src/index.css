@@ -1,0 +1,25 @@
+    .card-container__inner{
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 90vh;
+      box-shadow: 0 0 1rem .3rem rgb(0,0,0) !important;
+    }
+    .card-container__inner::-webkit-scrollbar {width: .6rem}
+    .card-container__inner::-webkit-scrollbar-track{
+      border-radius: .7rem;
+      box-shadow: inset 0 0 .3rem rgba(0,0,0,.25);
+    }
+    .card-container__inner::-webkit-scrollbar-thumb{
+      border-radius: .7rem;
+      background-color: rgb(0,0,0);
+    }
+    .card-container__inner::-webkit-scrollbar-track-piece{
+        padding: .2rem;
+        box-shadow: inset 0 0 .3rem .2rem rgba(0,0,0,.25);
+        background-color: rgba(255,255,255.4) !important;
+    }
+    .prompt{ background: #bff0ff !important; }
+    .hello{ font-size: 4rem; font-family: 'Hurricane', cursive !important; }
+    h3.enter-prompt{ font-family: 'Ibarra Real Nova', serif; }
+    h2{ font-family: 'Raleway' 'Imprima', sans-serif !important; text-align: center; }
+    header{ font-family: 'PT Sans', sans-serif; }
