@@ -80,11 +80,10 @@ const Homepage = () => {
                   <section className="row">
                     <section className="col-sm-12">
                       <section style={chatsHeaderStyle} className="p-1 text-center">
-                        <h2>
-                          <span className="my-2 hello">
+                        <h2 className="chats-header">
+                          <span className="my-2">
                             Hello!
                           </span>
-                          <br />
                           <span style={yellowHeaderWelcome}>
                             Your Personal Assistant.
                           </span>

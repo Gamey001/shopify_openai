@@ -19,10 +19,10 @@
         background-color: rgba(255,255,255.4) !important;
     }
     .prompt{ background: #bff0ff !important; }
-    .hello{ font-size: 4rem; font-family: 'Hurricane', cursive !important; }
     h3.enter-prompt{ font-family: 'Ibarra Real Nova', serif; }
-    h2{ font-family: 'Raleway' 'Imprima', sans-serif !important; text-align: center; }
+    h2{ font-family: 'Raleway', 'Imprima', sans-serif !important; text-align: center; }
     header{ font-family: 'PT Sans', sans-serif; }
+    .chats-header{ font-size: calc(1.5rem + 6vw) !important; font-family: 'Hurricane', cursive !important; }
 
     /*media queries*/
     @media (max-width: 498px) {
