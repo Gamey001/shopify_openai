@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import Homepage from "./components/Hompage";
 import { PromptsAndOutputsProvider } from "./context/promptsAndOutputsContext";
 
@@ -5,7 +6,9 @@ const App = () => {
   return (
     <>
       <PromptsAndOutputsProvider>
-        <Homepage />
+        <Fade>
+            <Homepage />
+        </Fade>
       </PromptsAndOutputsProvider>
     </>
   );

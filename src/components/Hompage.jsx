@@ -2,6 +2,7 @@ import { PromptsAndOutputsContext } from "../context/promptsAndOutputsContext";
 import { EnterPromptForm } from "../components/EnterPromptForm";
 import { useContext } from "react";
 import "../index.css";
+import { Bounce, JackInTheBox, Slide, Zoom } from "react-awesome-reveal";
 
 const Homepage = () => {
   const { state } = useContext(
@@ -61,7 +62,8 @@ const Homepage = () => {
       </nav>
       <section style={containerStyle} className="container-fluid p-4">
         <section className="row">
-          <header style={{ position: "relative" }} className="col-sm-6">
+        
+          <header style={{ position: "relative" }} className="col-sm-6 centralize">
             <h2 style={headerTxtStyle}>Fun with AI</h2>
             <EnterPromptForm />
             <section
@@ -96,6 +98,7 @@ const Homepage = () => {
                                 <li key={++newId} style={{ listStyle: "none" }}>
                                   <article>
                                     {input && (
+                                        <Slide direction="left">
                                       <section
                                         className="prompt"
                                         style={promptAndOutputWrHomepageerStyle}
@@ -104,7 +107,9 @@ const Homepage = () => {
                                           {input}
                                         </h2>
                                       </section>
+                                      </Slide>
                                     )}
+                                      <Bounce delay={750}>
                                     <section
                                       style={{
                                         display: "flex",
@@ -119,6 +124,7 @@ const Homepage = () => {
                                         </h2>
                                       </section>
                                     </section>
+                                    </Bounce>
                                   </article>
                                 </li>
                               );

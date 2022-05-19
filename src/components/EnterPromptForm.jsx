@@ -6,10 +6,10 @@ import { useContext, useEffect, useState, useRef } from "react";
 
 const promptForm = {
     position: 'absolute',
-    bottom: '17%',
+    top: '54%',
     left: '50%',
     transform: 'translateX(-50%)',
-    zIndex: '10',
+    zIndex: "10"
   }
 export const EnterPromptForm = ()=> {
     const [value, setValue] = useState('');
@@ -41,7 +41,7 @@ export const EnterPromptForm = ()=> {
           </section>
         </section>
         <section className="form-group row text-right">
-          <section className="col-sm-12">
+          <section className="col-sm-12 centralize">
             <button type="submit" className="btn btn-info">Submit</button>
           </section>
         </section>
