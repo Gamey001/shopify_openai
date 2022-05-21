@@ -26,7 +26,12 @@ export const PromptsAndOutputsProvider = ({ children }) => {
 
   const loadPOsFromLocalStorage = useCallback(() => {
     if (localStorage.promptsAndOutputs) {
-      setState(JSON.parse(localStorage.promptsAndOutputs));
+      try{
+        setState(JSON.parse(localStorage.promptsAndOutputs));
+      }catch{
+        alert("Failed to fetch from storage")
+      }
+      
     } else {
       localStorage.setItem("promptsAndOutputs", JSON.stringify(state));
     }

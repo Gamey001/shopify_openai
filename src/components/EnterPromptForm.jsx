@@ -31,6 +31,7 @@ export const EnterPromptForm = ()=> {
     useEffect(()=>{
         promptField.current.focus();
       });
+      
     return(
         <form onSubmit={handleSubmit} style={promptForm}>
         <section className="form-group row">
@@ -43,7 +44,7 @@ export const EnterPromptForm = ()=> {
         </section>
         <section className="form-group row text-right">
           <section className="col-sm-12 centralize">
-            <button type="submit" className="btn btn-info">Submit</button>
+            <input type="submit" value="Submit" className="btn btn-info" />
           </section>
         </section>
       </form>

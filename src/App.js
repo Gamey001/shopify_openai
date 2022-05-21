@@ -1,5 +1,5 @@
 import { Fade } from "react-awesome-reveal";
-import Homepage from "./components/Hompage";
+import Homepage from "./components/Homepage";
 import { PromptsAndOutputsProvider } from "./context/promptsAndOutputsContext";
 
 const App = () => {
